@@ -1,0 +1,83 @@
+/* Dark Mode Styles */
+.dark-mode {
+  --body-color: #111;
+  --text-color: #fff;
+  --title-color: #eee;
+  --title-color-dark: #ccc;
+  --container-color: #333;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+/* Additional styles for the dark mode toggle button */
+.dark-mode-toggle {
+  cursor: pointer;
+  background-color: var(--title-color);
+  color: var(--container-color);
+  padding: 0.4rem 0.8rem; /* Adjust padding for a smaller button */
+  border-radius: 0.3rem; /* Adjust border-radius for a slightly rounded appearance */
+  font-weight: var(--font-medium);
+  margin-right: 0.5rem; /* Adjust margin for spacing */
+  transition: background-color 0.3s;
+}
+
+.dark-mode-toggle:hover {
+  background-color: var(--title-color-dark);
+}
+/*=============== BREAKPOINTS ===============*/
+@media screen and (max-width: 992px) {
+  .container {
+    margin-left: var(--mb-1-5);
+    margin-right: var(--mb-1-5);
+  }
+
+  .button {
+    padding: 1rem 1.75rem;
+  }
+
+  .button__icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .dark-mode-toggle {
+    margin-right: var(--mb-1-5); /* Adjust margin as needed */
+  }
+}
+
+/* For medium devices */
+@media screen and (max-width: 768px) {
+  body {
+    margin: 0 0 var(--header-height) 0;
+  }
+
+  .section {
+    padding: 2rem 0 4rem;
+  }
+
+  .section__subtitle {
+    margin-bottom: var(--mb-3);
+  }
+
+  .dark-mode-toggle {
+    margin-right: var(--mb-1); /* Adjust margin as needed */
+  }
+}
+
+/* For small devices */
+@media screen and (max-width: 576px) {
+  .dark-mode-toggle {
+    margin-right: 0; /* No margin for small devices */
+  }
+}
+
+/* For extra small devices */
+@media screen and (max-width: 350px) {
+  :root {
+    --big-font-size: 2.25rem;
+  }
+
+  .container {
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+  }
+}
